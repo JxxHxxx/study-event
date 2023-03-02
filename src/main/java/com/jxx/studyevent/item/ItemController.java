@@ -2,7 +2,7 @@ package com.jxx.studyevent.item;
 
 import com.jxx.studyevent.event.MessageService;
 import com.jxx.studyevent.item.dto.ItemForm;
-import com.jxx.studyevent.item.dto.ItemResponse;
+import com.jxx.studyevent.item.dto.ItemReceiveResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,7 +20,7 @@ public class ItemController {
     }
 
     @GetMapping("/items/{item-id}")
-    public ItemResponse show(@PathVariable("item-id") Long itemId) {
+    public ItemReceiveResponse show(@PathVariable("item-id") Long itemId) {
         return itemService.receive(itemId);
     }
 }

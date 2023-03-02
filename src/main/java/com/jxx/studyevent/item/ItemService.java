@@ -1,7 +1,7 @@
 package com.jxx.studyevent.item;
 
 import com.jxx.studyevent.item.dto.ItemForm;
-import com.jxx.studyevent.item.dto.ItemResponse;
+import com.jxx.studyevent.item.dto.ItemReceiveResponse;
 import com.jxx.studyevent.store.Store;
 import com.jxx.studyevent.store.StoreRepository;
 import lombok.RequiredArgsConstructor;
@@ -16,10 +16,10 @@ public class ItemService {
     private final ItemRepository itemRepository;
     private final StoreRepository storeRepository;
 
-    public ItemResponse receive(Long itemId) {
+    public ItemReceiveResponse receive(Long itemId) {
         Item item = itemRepository.findById(itemId).get();
 
-        return new ItemResponse(
+        return new ItemReceiveResponse(
                 item.getId(),
                 item.getItemName(),
                 item.getPrice());
