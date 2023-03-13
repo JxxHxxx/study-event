@@ -1,12 +1,10 @@
 package com.jxx.studyevent;
 
-import com.jxx.studyevent.store.StoreService;
+import com.jxx.studyevent.store.application.StoreService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-
 import javax.annotation.PostConstruct;
-import java.io.IOException;
 
 @Component
 @RequiredArgsConstructor
@@ -14,9 +12,8 @@ public class InitDb {
 
     private final InitService initService;
 
-
     @PostConstruct
-    public void init() throws IOException {
+    public void init() {
         initService.dbInit1();
     }
 
@@ -26,7 +23,7 @@ public class InitDb {
     static class InitService {
         private final StoreService storeService;
 
-        public void dbInit1() throws IOException {
+        public void dbInit1() {
             storeService.enroll("춘리마라탕");
             storeService.enroll("교촌치킨");
             storeService.enroll("메가커피");

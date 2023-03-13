@@ -1,4 +1,4 @@
-package com.jxx.studyevent.item.dto;
+package com.jxx.studyevent.item.dto.response;
 
 import lombok.Getter;
 

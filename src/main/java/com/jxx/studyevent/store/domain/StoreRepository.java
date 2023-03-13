@@ -1,4 +1,4 @@
-package com.jxx.studyevent.store;
+package com.jxx.studyevent.store.domain;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
